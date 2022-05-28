@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>UV_PROJET</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+		<servlet-name>Page</servlet-name>
+		<servlet-class>com.page.Page</servlet-class>
+		
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Page</servlet-name>
+		<url-pattern>/page_contact</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Page_404</servlet-name>
+		<servlet-class>com.page.Page_404</servlet-class>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Page_404</servlet-name>
+		<url-pattern>/page_404</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FAQ</servlet-name>
+		<servlet-class>com.page.FAQ</servlet-class>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FAQ</servlet-name>
+		<url-pattern>/FAQs</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Examen</servlet-name>
+		<servlet-class>com.page.Examen</servlet-class>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Examen</servlet-name>
+		<url-pattern>/Examens</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Login_admins</servlet-name>
+		<servlet-class>com.page.Login_admins</servlet-class>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login_admins</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>com.page.Home</servlet-class>
+		
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home_admins</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
