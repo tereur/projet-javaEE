@@ -71,4 +71,45 @@
 		<url-pattern>/home_admins</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>deconnection</servlet-name>
+		<servlet-class>com.page.deconnection</servlet-class>
+		
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>deconnection</servlet-name>
+		<url-pattern>/deconnect</url-pattern>
+	</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>Salle</servlet-name>
+		<servlet-class>com.page.Salle</servlet-class>
+		
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Salle</servlet-name>
+		<url-pattern>/salle</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ValidateUV</servlet-name>
+		<servlet-class>
+		com.ajax.ValidateUV</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ValidateUV</servlet-name>
+		<url-pattern>/valider</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<welcome-file-list>
+		
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

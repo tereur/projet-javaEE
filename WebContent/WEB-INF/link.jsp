@@ -84,7 +84,7 @@
                 </li>
                 <li class="text-white">|</li>
                 <li>
-                  <a class="text-white" href="#">Login</a>
+                  <a class="text-white" href="login">Login</a>
                 </li>
               </ul>
             </div>
@@ -115,3 +115,49 @@
         </div>
       </div>
     </div>
+     <div class="header-nav">
+      <div class="header-nav-wrapper navbar-scrolltofixed bg-lightest">
+        <div class="container">
+          <nav id="menuzord-right" class="menuzord orange">
+            <a class="menuzord-brand pull-left flip mt-15" href="javascript:void(0)">
+              <img src="images/Untitled-2.png" alt="">
+            </a>
+            <ul class="menuzord-menu dark">
+            <c:choose>
+         
+        <c:when test="${option=='home' }"> 
+             <li class="active"><a href="home_admins">Home</a> </li>
+              </c:when>
+              <c:when test="${option!='home'}"> 
+              <li ><a href="home_admins">Home</a> </li>
+              </c:when>
+              
+         </c:choose>
+          <c:choose>
+         
+        <c:when test="${option=='faq' }"> 
+              <li class="active"><a href="FAQs">FAQ <span class="label label-info">New</span></a></li>
+              </c:when>
+              <c:when test="${option!='faq' }"> 
+               <li><a href="FAQs">FAQ <span class="label label-info">New</span></a></li>
+              </c:when>
+              
+         </c:choose>
+          <c:choose>
+         
+        <c:when test="${option=='contact' }"> 
+             <li class="active"><a href="page_contact">Contact</a></li>
+              </c:when>
+              <c:when test="${option!='contact' }"> 
+               <li><a href="page_contact">Contact</a></li>
+              </c:when>
+              
+         </c:choose>
+              
+             
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>

@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Login_admins
@@ -39,12 +40,16 @@ public class Login_admins extends HttpServlet {
 		String password="12345678";
 		String lgn =request.getParameter("login");
 		String pswd =request.getParameter("pswd");
-		if(pswd.equals(password)&& login.equals(lgn)) 
-			this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
-		else
-			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-	
-		
+		if(true) {
+			request.setAttribute("option","home");
+			HttpSession session =request.getSession();
+			session.setAttribute("login", lgn);
+			session.setAttribute("password", pswd);
+			request.setAttribute("session",session.getAttribute("login"));
+			this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		    
+		} else
+			this.getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);	
 	}
 
 }

@@ -1,31 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+  
+  <c:choose>
+         
+        <c:when test="${session==null}"> 
+              <%@ include file="/WEB-INF/link.jsp" %>
+              </c:when>
+              <c:when test="${session!=null}"> 
+              <%@ include file="/WEB-INF/link1.jsp" %>
+              </c:when>
+              
+         </c:choose>
 
-<%@ include file="link.jsp" %>
-    <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-lightest">
-        <div class="container">
-          <nav id="menuzord-right" class="menuzord orange">
-            <a class="menuzord-brand pull-left flip mt-15" href="javascript:void(0)">
-              <img src="images/Untitled-2.png" alt="">
-            </a>
-            <ul class="menuzord-menu dark">
-              <li ><a href="index.html">Home</a> </li>
-              <li><a href="page_404">Examen <span class="label label-info">New</span></a></li>
-                 
-              <li><a href="page_404">Courses  <span class="label label-info">New</span></a>
-                
-
-              <li><a href="#h">Room <span class="label label-info">New</span></a></li>
-              <li><a href="#">Teachers <span class="label label-info">New</span></a></li>
-              <li><a href="page_contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-
+   
   <!-- Start main-content -->
   <div class="main-content">
 

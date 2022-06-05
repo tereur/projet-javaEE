@@ -1,31 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%><!DOCTYPE html>
-<%@ include file="link1.jsp" %>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+  
+  <c:choose>
+         
+        <c:when test="${session==null}"> 
+              <%@ include file="/WEB-INF/link.jsp" %>
+              </c:when>
+              <c:when test="${session!=null}"> 
+              <%@ include file="/WEB-INF/link1.jsp" %>
+              </c:when>
+              
+         </c:choose>
 
-    <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-lightest">
-        <div class="container">
-          <nav id="menuzord-right" class="menuzord orange">
-            <a class="menuzord-brand pull-left flip mt-15" href="javascript:void(0)">
-              <img src="images/Untitled-2.png" alt="">
-            </a>
-            <ul class="menuzord-menu dark">
-              <li ><a href="index.html">Home</a> </li>
-              <li><a href="page_404">Examen <span class="label label-info">New</span></a></li>
-                 
-              <li><a href="page_404">Courses</a>
-                
-              <li><a href="page_404">Room <span class="label label-info">New</span></a> </li>
-
-              <li><a href="#h">Teachers</a></li>
-             
-              <li class="active"><a href="page_contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+    
    <!-- Section: inner-header -->
     <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/resultats.jpg">
       <div class="container pt-70 pb-20">

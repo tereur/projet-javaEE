@@ -77,7 +77,7 @@
                 </li>
                 <li class="text-white">|</li>
                 <li>
-                  <a class="text-white" href="#">Deconnecxion</a>
+                  <a class="text-white" href="deconnect">Deconnecxion</a>
                 </li>
               </ul>
             </div>
@@ -108,3 +108,87 @@
         </div>
       </div>
     </div>
+    </style>
+    <div class="header-nav">
+      <div class="header-nav-wrapper navbar-scrolltofixed bg-lightest">
+        <div class="container">
+          <nav id="menuzord-right" class="menuzord orange">
+            <a class="menuzord-brand pull-left flip mt-15" href="javascript:void(0)">
+              <img src="images/Untitled-2.png" alt="">
+            </a>
+            <ul class="menuzord-menu dark">
+                <c:choose>
+         
+        <c:when test="${option=='home' }"> 
+             <li class="active"><a>Home</a> </li>
+              </c:when>
+              <c:when test="${option!='home'}"> 
+              <li ><a href="home_admins">Home</a> </li>
+              </c:when>
+              
+         </c:choose>
+        
+                <c:choose>
+         
+        <c:when test="${option=='examen' }"> 
+             <li class="active" > <a>Examen</a> 
+              </c:when>
+              <c:when test="${option!='examen'}"> 
+              <li><a>Examen</a> 
+              </c:when>
+              
+         </c:choose>
+              <ul class="dropdown">
+                  <li><a href="#">Nouveau</a>
+                   <ul class="dropdown">
+                      <li><a href="Examens?examen=normal">Session normale</a></li>
+                      <li><a href="Examens?examen=rattrapage">Session Rattrapage</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Modifier</a> 
+                  <ul class="dropdown">
+                     <li><a href="#">Session normale</a></li>
+                      <li><a href="#">Session Rattrapage</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Supprimer</a>
+                   <ul class="dropdown">
+                    <li><a href="#">Session normale</a></li>
+                      <li><a href="#">Session Rattrapage</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li ><li><a href="page_404">Courses</a></li>
+                                <c:choose>
+         
+        <c:when test="${option=='room' }"> 
+             <li class="active"><a >Room <span class="label label-info">New</span></a> </li>
+              </c:when>
+              <c:when test="${option!='room'}"> 
+             <li><a href="salle">Room <span class="label label-info">New</span></a> </li>
+              </c:when>
+              
+         </c:choose> 
+              
+                
+              
+
+              <li><a href="#">Teachers</a></li>
+            
+              <c:choose>
+         
+        <c:when test="${option=='contact' }"> 
+             <li class="active"><a href="page_contact">Contact</a></li>
+              </c:when>
+              <c:when test="${option!='contact' }"> 
+               <li><a href="page_contact">Contact</a></li>
+              </c:when>
+              
+         </c:choose>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
